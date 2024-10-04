@@ -10,3 +10,11 @@ dependencies = [
   'rich',
   'fastapi[standard]',
 ]
+
+
+[tool.pytest.ini_options]
+addopts = "-v --cov"
+
+[tool.coverage.run]
+branch = true
+include = ["tests/*", "olympics/*"]
