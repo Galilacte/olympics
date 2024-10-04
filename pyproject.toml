@@ -13,7 +13,7 @@ dependencies = [
 
 
 [tool.pytest.ini_options]
-addopts = "-v --cov"
+addopts = "--cov=olympics --cov=tests"
 
 [tool.coverage.run]
 branch = true
