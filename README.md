@@ -278,3 +278,30 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
+
+
+
+
+
+
+------------------Ma partie:-------------------------------
+dans le fichier: pyproject.toml la ligne:  "[tool.pytest.ini_options]" sert à ajouter des dépendances.
+
+Dans le même fichier la ligne: "-v" sert à détailler le résultat des tests et le "--cov" sert à tester la couverture.
+
+Et la ligne: include = ["tests/*", "olympics/*"] sert à metre la couverture que sur les fichiers contenus dans tests et olympics.
+
+
+Question 7: le paramètre file sert à manipuler des fichiers comme ouvrire un fichier les fermer et enregistré des informations et écrire à l'interieur, dans les dossier cli  file=none signifi que les information sortiron sur la console de base. je n'ai pas trouvé les nom de la thecnique
+
+Question 8: pragma: no cover sert pour eviter qu'une partie de code soit testé, comme une ligne qui sert d'exeption ou une impossible à tester.
+
+Question 9:
+
+On pourrais tester la rapidité déxécution des demandes, la fiabilitée du code.
+
+
+Question 10 :
+
+parce que le fichier cli à besoi  de api pour fonctioner et api à besoin de db.
+Faire des testes de régressions sert à pouvoir géré les beugs 1 par 1 et d'avancer sur les testes sans problème, et aussi pouvoir voir les commit qu'on à fait et de revenir en arrière au cas ou.
