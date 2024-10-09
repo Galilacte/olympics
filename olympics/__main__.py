@@ -20,7 +20,7 @@ parser.add_argument(
     default=10,
 )
 
-def main(argv=None):
+def main(argv=None): 
     args = parser.parse_args(argv)
     if (top := int(args.top)) <= 0:
         raise argparse.ArgumentTypeError(f'{top} is not a positive number')
@@ -29,7 +29,7 @@ def main(argv=None):
             cli.top_countries(top)
         case 'collective':
             cli.top_collective(top)
-        case 'individual':
+        case 'individual':  
             cli.top_individual(top)
 
 

@@ -2,6 +2,7 @@ CREATE TABLE country (
   id INTEGER PRIMARY KEY NOT NULL,
   code TEXT NOT NULL UNIQUE,
   name TEXT NOT NULL,
+  WHERE country LIKE ?
   CHECK (length(code) = 3)
 );
 
@@ -51,3 +52,4 @@ CREATE TABLE medal (
     (athlete_id IS NOT NULL OR team_id IS NOT NULL) AND
     (type IN ('gold', 'silver', 'bronze')))
 );
+

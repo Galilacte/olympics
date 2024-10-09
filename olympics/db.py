@@ -17,11 +17,11 @@ def get_connection():
     return connection
 
 
-def get_countries(id=None):
+def get_countries(id=None, country=None):
     """Get list of countries.
 
     If id is not None, the list contains only the country with given id.
-
+    si name  n'est pas nul la liste contient que le ou les pays avec les lettre correspondante avec la recherche. 
     """
     cursor = get_connection().cursor()
     if id is None:
@@ -29,14 +29,30 @@ def get_countries(id=None):
             SELECT *
             FROM country
         ''').fetchall()
+    elif country is not None:
+        rows = cursor.execute('''
+            SELECT *
+            FROM country
+            WHERE country LIKE ?
+        ''', (f'%{country}%',)).fetchall()
+
     else:
         rows = cursor.execute('''
-            SELECT *s
+            SELECT *
             FROM country
             WHERE id = ?
         ''', (id,)).fetchall()
     cursor.close()
     return rows
+    
+    
+    
+    
+
+    
+    
+    
+    
 
 
 def get_athletes(id=None):
@@ -305,3 +321,5 @@ def get_top_individual(top=10):
     ''', (top,)).fetchall()
     cursor.close()
     return rows
+
+
