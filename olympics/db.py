@@ -12,7 +12,7 @@ def get_connection():
     connection = sqlite3.connect(db, detect_types=sqlite3.PARSE_DECLTYPES)
     connection.row_factory = sqlite3.Row
     cursor = connection.cursor()
-    cursor.execute('PRAGMA foreign_keys')
+    cursor.execute('PRAGMA foreign_keys = on')
     cursor.close()
     return connection
 
@@ -31,7 +31,7 @@ def get_countries(id=None):
         ''').fetchall()
     else:
         rows = cursor.execute('''
-            SELECT *
+            SELECT *s
             FROM country
             WHERE id = ?
         ''', (id,)).fetchall()
