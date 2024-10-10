@@ -6,9 +6,16 @@ def test_countries():
     assert len(rows) > 100
     
 def test_countries2():
-    rows = db.get_countries(1)
-    assert len(rows) > 0    
+    rows = db.get_countries(2)
+    assert len(rows) > 0
+    
+    
 
+    
+    
+    
+    
+    
 def test_athletes():
     rows = db.get_athletes()
     assert len(rows) > 100
